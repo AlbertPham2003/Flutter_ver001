@@ -64,20 +64,6 @@ void addProduct(List<Map<String, dynamic>> cart) {
   print("Đã thêm sản phẩm thành công!");
 }
 
-void displayCart(List<Map<String, dynamic>> cart) {
-  if (cart.isEmpty) {
-    print("Giỏ hàng đang trống.");
-    return;
-  }
-
-  print("\nGIỎ HÀNG");
-
-  for (int i = 0; i < cart.length; i++) {
-    print(
-        "${i + 1}. ${cart[i]["name"]} - SL: ${cart[i]["quantity"]} - Giá: ${cart[i]["price"]} - Thành tiền: ${cart[i]["quantity"] * cart[i]["price"]}");
-  }
-}
-
 void editProduct(List<Map<String, dynamic>> cart) {
   if (cart.isEmpty) {
     print("Giỏ hàng trống.");
@@ -121,6 +107,20 @@ void deleteProduct(List<Map<String, dynamic>> cart) {
     print("Đã xóa sản phẩm.");
   } else {
     print("Không tìm thấy sản phẩm.");
+  }
+}
+
+void displayCart(List<Map<String, dynamic>> cart) {
+  if (cart.isEmpty) {
+    print("Giỏ hàng đang trống.");
+    return;
+  }
+
+  print("\nGIỎ HÀNG");
+
+  for (int i = 0; i < cart.length; i++) {
+    print(
+        "${i + 1}. ${cart[i]["name"]} - SL: ${cart[i]["quantity"]} - Giá: ${cart[i]["price"]} - Thành tiền: ${cart[i]["quantity"] * cart[i]["price"]}");
   }
 }
 
