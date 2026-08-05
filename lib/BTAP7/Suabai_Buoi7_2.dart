@@ -1,5 +1,4 @@
 import 'dart:io';
-
 void main() {
   List<Product> products = [];
   while(true) {

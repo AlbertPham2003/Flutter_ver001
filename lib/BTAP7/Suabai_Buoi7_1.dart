@@ -10,12 +10,12 @@ void main() {
     if (option == '1') {
       print("Nhập tên học sinh: ");
       var name = stdin.readLineSync();
-      print("Nhập điểm Toán: "); //''
-      var diemToan = double.tryParse(stdin.readLineSync()) ?? 0;
+      print("Nhập điểm Toán: ");
+      var diemToan = double.tryParse(stdin.readLineSync() ?? '') ?? 0;
       print("Nhập điểm Hóa: ");
-      var diemHoa = double.tryParse(stdin.readLineSync()) ?? 0;
+      var diemHoa = double.tryParse(stdin.readLineSync() ?? '') ?? 0;
       print("Nhập điểm Lý: ");
-      var diemLy = double.tryParse(stdin.readLineSync()) ?? 0;
+      var diemLy = double.tryParse(stdin.readLineSync() ?? '') ?? 0;
       students.add(Student(name: name ?? "", diemToan: diemToan, diemHoa: diemHoa, diemLy: diemLy));
     }
     if (option == '2') {
